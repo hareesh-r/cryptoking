@@ -48,6 +48,7 @@ a:hover{
 .logo-container{
   background-color: #001529;
   display: flex;
+  flex-direction: column;
   padding: 20px;
   align-items: center;
   width: 100%;
