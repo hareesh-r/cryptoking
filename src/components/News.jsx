@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
-
+import Loader from './Loader';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
@@ -17,7 +17,7 @@ const News = ({ simplified }) => {
     const demoImage = "https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News";
 
     if (!cryptoNews?.value) {
-        return 'Loading...'
+        return <Loader />;
     }
 
     return (
