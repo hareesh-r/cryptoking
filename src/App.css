@@ -109,6 +109,8 @@ a:hover{
       margin-top: 90px;
       margin-left: 0px;
       margin-right: 10px;
+  } .main > .ant-layout {
+    margin-top: 50px;
   }
 
   .nav-container{
@@ -288,7 +290,7 @@ padding: 0px 20px;
       margin-top: 20px;
   }
   .main > .ant-layout {
-    margin-top: 30px;
+    margin-top: 50px;
   }
 }
 
