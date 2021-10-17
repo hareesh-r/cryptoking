@@ -49,9 +49,9 @@ a:hover{
   background-color: #001529;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   align-items: center;
   width: 100%;
+  padding: 20px;
 }
 .logo{
   margin:0 0 0 15px;
@@ -287,6 +287,9 @@ padding: 0px 20px;
   .heading{
       margin-top: 20px;
   }
+  .main > .ant-layout {
+    margin-top: 30px;
+  }
 }
 
 .select-news{
@@ -377,4 +380,8 @@ width: 70%;
   flex-direction: column;
   padding: 20px;
   align-items: center;
+}
+
+.ant-card-bordered {
+  border-radius: 8px !important;
 }
