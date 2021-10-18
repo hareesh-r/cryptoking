@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import millify from 'millify';
 import { Collapse, Row, Col, Typography, Avatar } from 'antd';
 import HTMLReactParser from 'html-react-parser';
@@ -10,6 +10,9 @@ const { Text } = Typography;
 const { Panel } = Collapse;
 
 const Exchanges = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+},[]);
   const { data, isFetching } = useGetExchangesQuery();
   const exchangesList = data?.data?.exchanges;
 

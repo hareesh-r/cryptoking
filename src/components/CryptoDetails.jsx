@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HTMLReactParser from 'html-react-parser';
 import { useParams } from 'react-router';
 import millify from 'millify';
@@ -12,7 +12,9 @@ const { Option } = Select;
 
 
 const CryptoDetails = () => {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[]);
     const { coinId } = useParams();
     const [timePeriod, setTimePeriod] = useState('7d');
     const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
@@ -21,6 +23,7 @@ const CryptoDetails = () => {
     const time = ['24h', '7d', '30d', '3m', '1y', '3y', '5y'];
 
     if (isFetching) return <Loader />
+
     const stats = [
         { title: 'Price to USD', value: `$ ${cryptoDetails.price && millify(cryptoDetails?.price)}`, icon: <DollarCircleOutlined /> },
         { title: 'Rank', value: cryptoDetails.rank, icon: <NumberOutlined /> },

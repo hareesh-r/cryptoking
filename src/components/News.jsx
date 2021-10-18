@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
 import Loader from './Loader';
@@ -9,6 +9,9 @@ const { Title, Text } = Typography;
 const { Option } = Select;
 
 const News = ({ simplified }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[]);
     const [newsCategory, setNewsCategory] = useState('Cryptocurrency')
 
     const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 8 : 100 });
